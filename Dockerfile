@@ -24,4 +24,4 @@ COPY . /app
 ENV RAILS_ENV production
 ENV RACK_ENV production
 # Execute the Procfile
-CMD ["bin/run-dev.sh"]
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
